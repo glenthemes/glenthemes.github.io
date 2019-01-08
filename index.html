@@ -1,15 +1,24 @@
 <!-----------------------------------------------------------------------
-curated by yours truly
+PORTFOLIO ⋮ Jan. 2019
+
+Made by glenthemes for glenthemes
+
+Credits
+> page section jump scroll jQuery help from magnusthemes @ Tumblr
+> "Honeybee" icon font by suiomi @ Tumblr
+> "Style My Tooltips" by malihu @ GitHub
+> text fonts: Google Fonts and their respective authors
+> 'easeOutCubic' animation values from/by: //gsgd.co.uk/sandbox/jquery/easing/
 ------------------------------------------------------------------------>
  
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
  
-<title>HT</title>
+<title>HIU TUNG TAI</title>
  
-<link rel="shortcut icon" href="//i205.photobucket.com/albums/bb186/mhilkas/favoicons/30bz9ms.gif">
+<link rel="shortcut icon" href="https://66.media.tumblr.com/e32bfa1b9bd1efaa290eadb15b471bd7/tumblr_pcxmtqdadA1ubolzro3_r1_500.png">
 
 <!--------------------JAVASCRIPTS-------------------->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -26,23 +35,105 @@ attribute:"title"
 });
 })(jQuery);
 </script>
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:200,300,400|Nunito|Open+Sans|Playfair+Display|Source+Code+Pro|Lora" rel="stylesheet">
 
+<script src="https://static.tumblr.com/2pnwama/UABpkz5d1/easeoutcubic.js"></script>
 
-<script> 
-$(document).ready(function(){ 
-    $(".drop").click(function(){ 
-        $("#shitposting").slideToggle('slow');
+<script>
+$(document).ready(function() {
+    $("img").on("contextmenu",function(){
+        return false;
+    });
+    
+    $("img").on("dragstart",function(){
+        return false;
     });
 });
 </script>
- 
-<link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:200,300,400|Nunito|Open+Sans|Quicksand:400,500|Raleway|Playfair+Display|Space+Mono" rel="stylesheet">
 
-<link href="//dl.dropbox.com/s/50g6fbds3rh4m0j/saturnicons.css" rel="stylesheet">
+<script>
+$(document).ready(function(){
+    $(".poptart").click(function() {
+        $("#screen, .crd-box").fadeIn();
+    });
+    
+    $("#screen").click(function() {
+        $("#screen, .crd-box").fadeOut();
+    });
+});
+
+$(document).keydown(function (event) {
+    if (event.keyCode == 27) {
+        $('#screen, .crd-box').fadeOut();
+        return false;
+    }
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    var about = $("#about-sect").offset().top;
+        skill = $('#skills-sect').offset().top;
+        art = $('#art-sect').offset().top;
+        photo = $('#photo-sect').offset().top;
+        gfx = $('#gfx-sect').offset().top;
+        web = $('#web-sect').offset().top;
+        collab = $('#collab-sect').offset().top;
+        contact = $('#contact-sect').offset().top,
+            
+    // about scroll
+    $(".about").click(function() {
+        $("#megacont").animate({scrollTop: about-65}, 800, 'easeOutCubic');
+    });
+    
+    // skills scroll
+    $(".skills").click(function() {
+        $("#megacont").animate({scrollTop: skill-65}, 800, 'easeOutCubic');
+    });
+    
+    // art scroll
+    $(".art").click(function() {
+        $("#megacont").animate({scrollTop: art-65}, 800, 'easeOutCubic');
+    });
+    
+    // photo scroll
+    $(".photo").click(function() {
+        $("#megacont").animate({scrollTop: photo-65}, 800, 'easeOutCubic');
+    });
+    
+    // gfx scroll
+    $(".gfx").click(function() {
+        $("#megacont").animate({scrollTop: gfx-65}, 800, 'easeOutCubic');
+    });
+    
+    // web scroll
+    $(".web").click(function() {
+        $("#megacont").animate({scrollTop: web-65}, 800, 'easeOutCubic');
+    });
+    
+    // collab scroll
+    $(".collab").click(function() {
+        $("#megacont").animate({scrollTop: collab-65}, 800, 'easeOutCubic');
+    });
+    
+    // contact scroll
+    $(".contact").click(function() {
+        $("#megacont").animate({scrollTop: contact-65}, 800, 'easeOutCubic');
+    });
+    
+});// end
+</script>
+
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
  
 <!-------------------------------------------------------------------->
  
 <style type="text/css">
+
+@font-face { font-family: "big noodle"; src: url('https://dl.dropboxusercontent.com/s/kxfy020vrpkbbz7/big_noodle_titling_oblique.ttf'); }
  
 /*--------------------TOOLTIPS--------------------*/
 #s-m-t-tooltip {
@@ -59,23 +150,29 @@ $(document).ready(function(){
     max-width:40vw;
 }
  
+/*--------------------TUMBLR CONTROLS--------------------*/
+iframe#tumblr_controls, .iframe-controls--desktop, .tmblr-iframe--app-cta-button, iframe.tmblr-iframe {
+    display:none;
+}
+
+ 
 /*--------------------SCROLLBAR--------------------*/
 ::-webkit-scrollbar {
-    background-color:#fefefe;
+    background-color:#fcfcfc;
     height:13px;
     width:13px;
 }
  
 ::-webkit-scrollbar-thumb {
     background-color:#666;
-    border:6px solid #fefefe;
+    border:6px solid #fcfcfc;
 }
  
 ::-webkit-scrollbar-track {
-    background-color:#fefefe;
+    background-color:#fcfcfc;
 }
  
-/*--------------------TEXT HIGHLIGHT--------------------*/
+/*--------------------TEXT HIGHLIGHT--------------------
 ::selection {
 background:#fafafa;
 color:#555;
@@ -84,18 +181,19 @@ color:#555;
 ::-moz-selection {
 background:#fafafa;
 color:#555;
-}
+} */
  
 /*--------------------BASICS--------------------*/
 body {
-    background:#fff url(https://static.tumblr.com/c0a4e7cc4f5c2882a7779a37b63132bf/2pnwama/1wspebb34/tumblr_static_3rkx4t9bgaqscw04kw440skgw.png);
+    /* background:#f9f8f9 url('//i.imgur.com/Z0E0zOZ.png'); */
+    background:#fcfcfc;
     background-attachment:fixed;
     background-repeat:repeat;
     color:#444;
     cursor:normal;
     font-family:nunito;
-    line-height:1.7em;
-    font-size:13px;
+    line-height:1.6em;
+    font-size:12px;
     text-align:left;
 }
  
@@ -108,24 +206,19 @@ blockquote {
 }
 
 a {
-    color:#fff;
+    color:inherit;
     text-decoration:none;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
 }
 
-b, strong {
-    font-weight:bold;
-    color:#555;
-}
-
-i, em, {color: {color:Italic};}
-
 pre, code {
     white-space:pre-wrap;
     display:block;
 }
+
+p:last-child {margin-bottom:0px;}
 
 hr {
     width:70%;
@@ -133,273 +226,1300 @@ hr {
     height:1px;
     background-color:#bbb;
 }
- 
-/*--------------------CONTAINER--------------------*/
-#cont {
-    position:absolute;
-    top:0;left:0;right:0;
-    margin:0 auto;
-    margin-top:50px;
-    margin-bottom:50px;
-    width:620px;
+
+highlight {
+    padding:1px 5px;
+    background-color:#f9f9f9;
+    border:1px solid #eee;
+    border-radius:3px;
 }
 
-#headsect {
-    display:flex;
+blue, .blue {
+    color:#aabfd0;
 }
 
-.icoe {
-    width:100px;
-    height:100px;
-    border-radius:100%;
-    filter:grayscale(20%);
-    -webkit-filter:grayscale(20%);
-}
-
-.desc {
-    align-self:center;
-    webkit-align-self:center;
-    margin-left:35px;
-}
-
-.label {
+.bigtiddy {
+    margin:0 auto 35px auto;
+    display:block;
     width:max-content;
     width:-moz-max-content;
-    padding:6px 10px;
-    background-color:#222;
-    font-family:montserrat;
-    letter-spacing:3px;
-    line-height:1em;
-    color:#eee;
-    cursor:default;
-}
-
-.minidesc {
-    margin-top:15px;
-}
-
-.minidesc p:last-child {margin-bottom:0px}
-
-#naav {
-    margin-top:50px;
-}
-
-.navtit {
-    padding:15px;
-    background-color:#fafafa;
-    border:1px solid #eee;
-    font-family:quicksand;
-    font-weight:500;
+    font-family:playfair display;
     text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:11px;
-    color:#444;
-    line-height:1em;
+    font-size:16px;
+    letter-spacing:2px;
+    color:#222;
 }
 
-.navsect {
-    margin-top:15px;
-    padding:0px 10px;
+.bline {
+    padding:0 8px 12px 8px;
+    border-bottom:2px solid #DBE4EB;
 }
 
-/*----BIOGRAPHY BULLET POINTS----*/
-.bullet-line {
+/*--------------------topbar--------------------*/
+#topbar {
+    position:fixed;
+    top:0;margin-top:0px;
+    left:0;
+    width:100vw;
+    height:64px;
+    background-color:#00011C;
+    border-top:1px solid transparent;
+    border-bottom:1px solid transparent;
+    display:table;
+    z-index:10;
+}
+
+#tpmid {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.topleft {
+    float:left;
+}
+
+.jar {
+    margin-top:9px;
+    margin-left:20px;
     display:flex;
-    margin-bottom:8px;
+    height:0;
 }
- 
-.bullet-line:last-of-type {margin-bottom:0px;}
- 
-.navsect .cursor {
-    -webkit-align-self:center;
+
+.julie {
     align-self:center;
-    width:22px; /* width of bullet point icon */
+    -webkit-align-self:center;
+    width:22px;
+    height:22px;
+    filter:invert(100%);
+    -webkit-filter:invert(100%);
+    -moz-filter:invert(100%);
+    -o-filter:invert(100%);
+    -ms-filter:invert(100%);
+    opacity:0.95;
 }
- 
-.bullet-text {
-    margin-left:12px;
-}
- 
-.bullet-text a, .bullet-text name {
-    text-transform:uppercase;
-    letter-spacing:1px;
+
+.htt {
+    align-self:center;
+    -webkit-align-self:center;
+    margin-left:10px;
+    font-family:playfair display;
     font-size:10px;
-    color:#222; /* bullet point label color */
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#fff;
 }
 
-#shitposting {
-    display:none;
-    margin-top:1em}
+.topright {
+    float:right;
+    margin-right:20px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Chrome and Opera */
+}
 
-#shitposting img {
+.topright a {
+    margin:0 10px;
+    padding:26.5px 0;
+    font-family:playfair display;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#fff;
+    text-shadow:4px 0 transparent, -4px 0 transparent;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    cursor:pointer;
+
+}
+
+.topright a:hover {
+    color:transparent;
+    text-shadow:0 0 #fff, 0 0 #fff;
+}
+
+.topright a:last-child {margin-right:0px;}
+
+/*--------------------container--------------------*/
+#megacont {
+    position:absolute;
+    top:0;margin-top:65px;
+    left:0;right:0;
+    width:100vw;
+    height:calc(100vh - 65px);
+    overflow:auto;
+}
+
+/*--------------------about--------------------*/
+#about-sect {
+    margin:0 auto;
+    height:calc(100vh - 65px);
+    display:table;
+}
+
+#abt-mid {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+#abt-flex {
+    display:flex;
+}
+
+#abt-flex > div {
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.abt-img {
+    width:230px;
+    height:344px;
+    border-radius:2px;
+}
+
+.abt-right {
+    margin-left:50px;
+    width:200px;
+}
+
+.abtit-flex {display:flex;}
+
+.abtit-flex > div {
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.abt-tit {
+    font-family:playfair display;
+    text-transform:uppercase;
+    font-size:14px;
+    letter-spacing:2px;
+    color:#222;
+}
+
+.llline {
+    margin-left:20px;
+    width:40px;
+    height:1px;
+    background:#222;
+}
+
+.abt-txt {
+    margin-top:25px;
+    font-family:karla;
+    font-size:12px;
+    color:#444;
+    text-align:justify;
+    line-height:1.8em;
+}
+
+.abt-txt .code {
+    margin-top:20px;
+    font-family:inconsolata;
+    padding-left:15px;
+    border-left:2px solid #dbe4eb;
+    text-align:left;
+}
+
+/*--------------------skills--------------------*/
+#skills-sect {
+    margin:0 auto;
+    height:calc(100vh - 65px);
+    display:table;
+}
+
+#skills-mid {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.skill-row {
+    margin-bottom:60px;
+    display:flex;
+}
+
+.skill-row:last-of-type {margin-bottom:0px;}
+
+.skill-item {
+    margin-right:80px;
+    width:260px;
+}
+
+.skill-item:last-of-type {margin-right:0px;}
+
+.skill-title {
+    position:relative;
+    width:max-content;
+    width:-moz-max-content;
+    padding-bottom:12px;
+    border-bottom:3px solid #dbe4eb;
+    font-family:playfair display;
+    text-transform:uppercase;
+    font-size:13px;
+    letter-spacing:2px;
+    color:#222;
+}
+
+.skill-line {
+    margin-top:-2px;
+    margin-bottom:15px;
+    width:100%;
+    height:1px;
+    background:#eee;
+    z-index:-1;
+}
+
+.stat-row {
+    margin-top:11px;
+    display:flex;
+    justify-content:space-between;
+    font-family:inconsolata;
+    font-size:12px;
+    color:#444;
+}
+
+.stat-row > div {
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.stat-name {
+    margin-right:15px;
+}
+
+.stat-deet {
+    color:inherit;
+    opacity:0.8;
+}
+
+.stat-bar {
+    width:60%;
+    height:6px;
+    border:1px solid #dbe4eb;
+    background-color:transparent;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.stat-fill {
+    margin-left:0px;
+    margin-top:0px;
+    height:100%;
+    background-color:#dbe4eb;
+}
+
+/*--------------------artwork--------------------*/
+#art-sect {
+    margin:0 auto;
+    height:calc(100vh - 65px);
+    display:table;
+}
+
+#art-mid {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.artbigflex {
+    display:flex;
+}
+
+.art-left {
+    
+}
+
+.art-row {
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.art-row:last-of-type {margin-bottom:0px;}
+
+.art-item {
+    margin-right:25px;
+    height:180px;
+    padding:15px;
+    background:white;
+    box-shadow:2px 2px 17px rgba(0,0,0,0.06);
+    border-radius:2px;
+}
+
+.art-right {
+    margin-left:40px;
+    align-self:center;
+    -webkit-align-self:center;
+    width:220px;
+}
+
+.arttiddy {
+    width:max-content;
+    width:-moz-max-content;
+    padding:0 2px 12px 2px;
+    border-bottom:2px solid #DBE4EB;
+    font-family:playfair display;
+    text-transform:uppercase;
+    font-size:14px;
+    letter-spacing:2px;
+    color:#222;
+}
+
+.artdesc {
+    margin-top:16px;
+    font-family:inconsolata;
+    font-size:12px;
+    text-align:justify;
+    line-height:1.8em;
+}
+
+.glenmore {
+    margin-top:25px;
+    
+}
+
+.glenmore a {
+    padding-bottom:12px;
+    border-bottom:4px solid #ebf0f4;
+    font-family:karla;
+    font-weight:bold;
+    text-transform:uppercase;
+    font-size:13px;
+    letter-spacing:2px;
+    color:#222;
+}
+
+.glenmore a:hover {
+    border-bottom:4px solid #DBE4EB;
+}
+
+/*--------------------photography--------------------*/
+#photo-sect {
+    margin:0 auto;
+    height:calc(100vh - 65px);
+    display:table;
+}
+
+#photo-mid {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.photo-row {
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.photo-row:last-of-type {margin-bottom:0px;}
+
+.photo-item {
+    margin-right:25px;
+    height:180px;
+    padding:15px;
+    background:white;
+    box-shadow:2px 2px 17px rgba(0,0,0,0.06);
+    border-radius:2px;
+}
+
+/*--------------------gfx--------------------*/
+#gfx-sect {
+    margin:0 auto;
+    height:calc(100vh - 65px);
+    display:table;
+}
+
+#gfx-mid {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.g-cont {
+    display:flex;
+}
+
+.g-main {
+    margin-right:80px;
+    width:350px;
+}
+
+.g-main:last-of-type {margin-right:0px;}
+
+.g-img {
     width:100%;
 }
 
-#shitposting p:last-child {margin-bottom:0px}
+.gfx-flex {
+    display:flex;
+    margin-top:20px;
+}
+
+.gfx-flex > div {
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.gfx-tit {
+    font-family:playfair display;
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:2px;
+    color:#222;
+}
+
+.g-desc {
+    margin-top:10px;
+    font-family:inconsolata;
+    font-size:12px;
+    text-align:justify;
+}
+
+.g-picflex {
+    display:flex;
+}
+
+.g-flimg {
+    margin:auto 23px;
+    height:253px;
+}
+
+/*--------------------web / themes--------------------*/
+#web-sect {
+    margin:0 auto;
+    width:800px;
+    height:calc(100vh - 65px);
+    display:table;
+}
+
+#web-mid {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.glenflex {
+    display:flex;
+}
+
+.glenleft {
+    width:230px;
+}
+
+.webtiddy {
+    width:max-content;
+    width:-moz-max-content;
+    padding:0 2px 12px 2px;
+    border-bottom:2px solid #DBE4EB;
+    font-family:playfair display;
+    text-transform:uppercase;
+    font-size:14px;
+    letter-spacing:2px;
+    color:#222;
+}
+
+.webdesc {
+    margin-top:16px;
+    font-family:inconsolata;
+    font-size:12px;
+    text-align:justify;
+    line-height:1.8em;
+}
+
+.glenjamin {
+    float:left;
+    margin-top:2px;
+    margin-right:14px;
+    width:35px;
+    height:auto;
+}
+
+.glenmore {
+    margin-top:25px;
+    
+}
+
+.glenmore a {
+    padding-bottom:12px;
+    border-bottom:4px solid #ebf0f4;
+    font-family:karla;
+    font-weight:bold;
+    text-transform:uppercase;
+    font-size:13px;
+    letter-spacing:2px;
+    color:#222;
+}
+
+.glenmore a:hover {
+    border-bottom:4px solid #DBE4EB;
+}
+
+.glenright {
+    margin-left:80px;
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.glen-row {
+    display:flex;
+    margin-bottom:50px;
+}
+
+.glen-row:last-of-type {margin-bottom:0px;}
+
+.glen-big {
+    margin-right:40px;
+    width:300px;
+}
+
+.glen-big:last-of-type {margin-right:0px;}
+
+.glen-pc {
+    width:100%;
+}
+
+.glen-holder {
+    position:absolute;
+    margin-top: calc((-223px / 16 * 9) - 38px);
+    margin-left: 36px;
+    width: 223px;
+    height: calc((223px / 16 * 9) + 1px);
+    overflow:hidden;
+}
+
+.glen-pv {
+    width:100%;
+}
+
+.glen-bar {
+    margin-top:0px;
+    display:inline-block;
+    width:calc(100% - 24px);
+    padding:10px 12px 5px 12px;
+    background-color:#131212;
+    font-family:karla;
+    text-transform:uppercase;
+    font-size:10px;
+    letter-spacing:1px;
+    color:#eee;
+    text-align:center;
+    line-height:1em;
+}
+
+.glen-big:hover .glen-bar {
+    margin-top:-24px;
+}
+
+/*--------------------collab--------------------*/
+#collab-sect {
+    margin:0 auto;
+    height:calc(100vh - 65px);
+    display:table;
+}
+
+#collab-mid {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.coral-flex {
+    display:flex;
+}
+
+.big-coral {
+    height:calc(360px + 14px);
+    box-shadow:5px 20px 45px rgba(0,0,0,0.04);
+    border-radius:10px;
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.coral-right {
+    margin-left:50px;
+    width:220px;
+}
+
+.collab-tit {
+    font-family:playfair display;
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:2px;
+    color:#222;
+}
+
+.collab-tit.mega {
+    margin-bottom:15px;
+    font-size:14px;
+}
+
+.author-flex {
+    margin-top:15px;
+    display:flex;
+    margin-bottom:15px;
+}
+
+.author-flex:last-of-type {margin-bottom:0px;}
+
+.gleuressence {
+    width:35px;
+    height:35px;
+    border-radius:100%;
+    box-shadow:2px 2px 17px rgba(0,0,0,0.15);
+}
+
+.fleur {
+    margin-left:12px;
+    align-self:center;
+    -webkit-align-self:center;
+    font-family:karla;
+    line-height:1em;
+}
+
+.fleur-top {
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.fleur-bot {
+    margin-top:3px;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#888;
+}
+
+.yorha {
+    margin-top:15px;
+    font-family:inconsolata;
+    font-size:12px;
+    text-align:justify;
+    line-height:1.85em;
+}
+
+/*--------------------contact--------------------*/
+#contact-sect {
+    margin:0 auto;
+    height:calc(450px - 65px);
+    display:table;
+}
+
+#contact-mid {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.soche {
+    display:inline-table;
+    margin-right:70px;
+}
+
+.soctiddy {
+    margin-bottom:15px;
+    font-family:playfair display;
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:2px;
+    color:#222;
+}
+
+.soctiddy.indent {
+    margin-left:calc(32px + 15px);
+}
+
+.honeyflex {
+    display:flex;
+    margin-bottom:12px;
+}
+
+.honeflex:last-of-type {margin-bottom:0px;}
+
+.honeyflex .th {
+    padding:10px;
+    border-radius:100%;
+    box-shadow:2px 2px 17px rgba(0,0,0,0.09);
+    font-size:12px;
+    color:#444;
+}
+
+.honeytext {
+    align-self:center;
+    -webkit-align-self:center;
+    margin-left:15px;
+    font-family:karla;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:11px;
+}
+
+.honeytext a {
+    padding-bottom:7px;
+    border-bottom:3px solid #ebf0f4;
+}
+
+.honeytext a:first-of-type {margin-left:3px;}
+
+et:before {
+    content:"";
+    margin-right:3px;
+}
+
+et:after {
+    content:"";
+    margin-left:3px;
+}
+
+.honeytext a:hover {
+    border-bottom:3px solid #DBE4EB;
+}
+
+.context {
+    margin-bottom:15px;
+    width:280px;
+    font-family:inconsolata;
+    color:#666;
+    line-height:1.7em;
+    text-align:justify;
+}
+
+.cr {
+    margin-top:20px;
+    text-align:center;
+    font-family:karla;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:10px;
+    color:#aaa;
+    line-height:1em;
+}
+
+.cr a {
+    color:inherit;
+    padding-bottom:2px;
+    border-bottom:1px solid #eee;
+    cursor:help;
+}
+
+#screen {
+    display:none;
+    position:fixed;
+    top:0;left:0;right:0;
+    margin:65px auto 0 auto;
+    height:calc(100vh - 65px);
+    width:100vw;
+    background-color:rgba(255,255,255,0.8);
+    z-index:9;
+}
+
+#screen-table {
+    margin:0 auto;
+    width:440px;
+    height:100%;
+    display:table;
+}
+
+#screen-mid {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.crd-box {
+    padding:25px;
+    background-color:white;
+    box-shadow:5px 20px 45px rgba(0,0,0,0.04);
+}
+
+.crd-tiddy {
+    font-family:playfair display;
+    text-transform:uppercase;
+    font-size:16px;
+    letter-spacing:2px;
+    color:#222;
+    text-align:center;
+}
+
+.crd-cont {
+    margin-top:20px;
+    line-height:1.6em;
+}
+
+.crd-cont a {
+    color:inherit;
+    padding-bottom:2px;
+    border-bottom:1px solid #eee;
+}
  
 </style>
  
 </head>
  
 <body>
+<div id="screen">
+<div id="screen-table">
+<div id="screen-mid">
+    <div class="crd-box">
+        <div class="crd-tiddy">credits</div>
+        <div class="crd-cont">
+            page section jump scroll jQuery help from <a href="//magnusthemes.tumblr.com">magnusthemes</a>
+            <p>
+            "Honeybee" icon font by <a href="https://honeybee.suiomi.com">suiomi</a>
+            <p>
+            "Style My Tooltips" by <a href="https://github.com/malihu/jquery-style-my-tooltips">malihu</a>
+            <p>
+            text fonts: Google Fonts and their respective authors
+            <p>
+            'easeOutCubic' animation values [<a href="//gsgd.co.uk/sandbox/jquery/easing/">x</a>]
+        </div><!--crd-cont-->
+    </div><!--crd-box-->
+</div><!--screen-mid-->
+</div><!--screen-table-->
+</div><!--screen-->
 
-<div id="cont">
-    <div id="headsect">
-        <a title="worst widow EU
-    "><img class="icoe" src="https://66.media.tumblr.com/87d53504fe5721d16cd094cc3fe7ae83/tumblr_pgxctuWkxI1qg2f5co5_250.png" ondragstart="return false"></a>
-        <div class="desc">
-            <div class="label">.: HT :.</div>
-            <div class="minidesc">
-                戴曉彤 // '98 // HKG --> UK // INFP // chaotic good
-                <br>
-                English major // art person
-            </div><!--minidesc-->
-        </div><!--desc-->
-    </div><!--headsect-->
-    
-    
-    
-    <div id="naav">
-        <div class="navtit">× works</div>
-        <div class="navsect">
-        
-        <!---- ONE BULLET POINT ---->
-        <div class="bullet-line">
-        <img class="cursor" src="https://dl.dropbox.com/s/5hwjttrmhctwpd9/select%20cursor%20svg.svg">
-        <div class="bullet-text">
-            <a href="https://www.instagram.com/anyilia_/">art</a>
-        </div><!--please do not delete this line-->
-        </div><!--please do not delete this line-->
-        
-        
-        <!---- ONE BULLET POINT ---->
-        <div class="bullet-line">
-        <img class="cursor" src="https://dl.dropbox.com/s/5hwjttrmhctwpd9/select%20cursor%20svg.svg">
-        <div class="bullet-text">
-            <a href="//glenthemes.tumblr.com">themes / codes</a>
-        </div><!--please do not delete this line-->
-        </div><!--please do not delete this line-->
-            
-        </div><!--navsect-->
-    </div><!--naav-->
-    
-    
-    
-    <div id="naav">
-        <div class="navtit">× links</div>
-        <div class="navsect">
-        
-        <!---- ONE BULLET POINT ---->
-        <div class="bullet-line">
-        <img class="cursor" src="https://dl.dropbox.com/s/5hwjttrmhctwpd9/select%20cursor%20svg.svg">
-        <div class="bullet-text">
-            <a href="https://steamcommunity.com/id/Fenneltail/">steam</a>
-        </div><!--please do not delete this line-->
-        </div><!--please do not delete this line-->
-        
-        
-        <!---- ONE BULLET POINT ---->
-        <div class="bullet-line">
-        <img class="cursor" src="https://dl.dropbox.com/s/5hwjttrmhctwpd9/select%20cursor%20svg.svg">
-        <div class="bullet-text">
-            <a href="https://www.instagram.com/fenneltail/">instagram</a>
-        </div><!--please do not delete this line-->
-        </div><!--please do not delete this line-->
-        
-        
-        <!---- ONE BULLET POINT ---->
-        <div class="bullet-line">
-        <img class="cursor" src="https://dl.dropbox.com/s/5hwjttrmhctwpd9/select%20cursor%20svg.svg">
-        <div class="bullet-text">
-            <a href="https://twitter.com/ukiibox">twitter</a>
-        </div><!--please do not delete this line-->
-        </div><!--please do not delete this line-->
-         
-         
-         <!---- ONE BULLET POINT ---->
-        <div class="bullet-line">
-        <img class="cursor" src="https://dl.dropbox.com/s/5hwjttrmhctwpd9/select%20cursor%20svg.svg">
-        <div class="bullet-text">
-            <a href="https://github.com/glenthemes">github</a>
-        </div><!--please do not delete this line-->
-        </div><!--please do not delete this line-->
-            
-        </div><!--navsect-->
-    </div><!--naav-->
-    
-    
-    
-    
-    <div id="naav">
-        <div class="navtit">× misc.</div>
-        <div class="navsect">
-        
-        <!---- ONE BULLET POINT ---->
-        <div class="bullet-line">
-        <img class="cursor" src="https://dl.dropbox.com/s/5hwjttrmhctwpd9/select%20cursor%20svg.svg">
-        <div class="bullet-text">
-            <name>Overwatch:</name> Fenneltail#4488 (main: Ana) (ha ha soryr i am Bad)
-        </div><!--please do not delete this line-->
-        </div><!--please do not delete this line-->
-        
-        
-        <!---- ONE BULLET POINT ---->
-        <div class="bullet-line">
-        <img class="cursor" src="https://dl.dropbox.com/s/5hwjttrmhctwpd9/select%20cursor%20svg.svg">
-        <div class="bullet-text">
-            <name>Bandori:</name> 206162 (favs: Kaoru, Tomoe)
-        </div><!--please do not delete this line-->
-        </div><!--please do not delete this line-->
-        
-        
-        <!---- ONE BULLET POINT ---->
-        <div class="bullet-line">
-        <img class="cursor" src="https://dl.dropbox.com/s/5hwjttrmhctwpd9/select%20cursor%20svg.svg">
-        <div class="bullet-text">
-            <name>LLSIF (inactive):</name> 122389686 (favs: You, Kanan)
-        </div><!--please do not delete this line-->
-        </div><!--please do not delete this line-->
-        
-        
-        <!---- ONE BULLET POINT ---->
-        <div class="bullet-line">
-        <img class="cursor" src="https://dl.dropbox.com/s/5hwjttrmhctwpd9/select%20cursor%20svg.svg">
-        <div class="bullet-text">
-            <name>currently into:</name> Dishonored 2, Drakengard 3, NieR Gestalt, NieR: Automata
-        </div><!--please do not delete this line-->
-        </div><!--please do not delete this line-->
-            
-        </div><!--navsect-->
-    </div><!--naav-->
-    
-    
-    
-    <div id="naav">
-    <div class="navtit drop" style="cursor:help;">¯\_( ಠ_ಠ)_/¯</div>
-    <div id="shitposting">
-        <img src="https://66.media.tumblr.com/c2dc03289a29117eeaba50915fcca049/tumblr_phe062gZqI1qg2f5co2_1280.jpg">
-        <p>
-        <img src="https://66.media.tumblr.com/eacbec92601cc70e3b701b8cf0b4ae6c/tumblr_phe043BhT51qg2f5co2_400.jpg">
-        <p>
-        <img src="https://66.media.tumblr.com/70dbabc54724f969ab3e260d845e5ac6/tumblr_phe043BhT51qg2f5co3_400.jpg">
-        <p>
-        <img src="https://cdn.discordapp.com/attachments/382037367940448256/504392634455031808/293928fjf.png">
-        <p>
-        <img src="https://66.media.tumblr.com/bdceb0129cc79637a97c2aa9239c1504/tumblr_phe043BhT51qg2f5co4_250.jpg">
-        <p>
-        <img src="https://66.media.tumblr.com/dc71f918618efccb3f251e3eb07724d6/tumblr_phe043BhT51qg2f5co5_250.jpg">
-        <p>
-        <img src="https://66.media.tumblr.com/84bb96ac8e98bc4874677197db0ccedb/tumblr_phe043BhT51qg2f5co6_1280.jpg">
-        <p>
-        <img src="https://66.media.tumblr.com/d07fd387090992ea5d747261d5a0c09b/tumblr_phe043BhT51qg2f5co1_640.jpg">
-    </div>
-    </div>
+<!----------TOP BAR---------->
+<div id="topbar">
+<div id="tpmid">
+    <div class="topleft">
+        <div class="jar">
+        <img class="julie" src="https://dl.dropboxusercontent.com/s/e4n393jw28moca9/f1_black%20svg.svg" ondragstart='return false;'>
+        <div class="htt">hiu tung tai</div>
+        </div><!--jar-->
+    </div><!--topleft-->
 
-</div><!--cont-->
+    <div class="topright">
+        <a class="about">about</a>
+        <a class="skills">skills</a>
+        <a class="art">artwork</a>
+        <a class="photo">photography</a>
+        <a class="gfx">graphic design</a>
+        <a class="web">web development</a>
+        <a class="collab">collaborations</a>
+        <a class="contact">contact</a>
+    </div><!--topright-->
+</div><!--tpmd-->
+</div><!--topbar-->
+
+<div id="megacont">
+
+    <!----------ABOUT SECTION---------->
+    <div id="about-sect">
+    <div id="abt-mid">
+    <div id="abt-flex">
+        <img class="abt-img" src="https://static.tumblr.com/2pnwama/FGjpl0ak8/ccet_blue.png">
+        <!--https://66.media.tumblr.com/89637f841decc3654fddb7fb63f27828/tumblr_pkup3o7x4A1qg2f5co6_r1_1280.png-->
+        
+        <div class="abt-right">
+            <div class="abtit-flex">
+            <div class="abt-tit">about me</div>
+            <div class="llline"></div>
+            </div><!--abt-flex-->
+            
+            <div class="abt-txt"><b>Hello, I'm Hiu Tung,</b> 20, from Hong Kong. Better known as <highlight>HT</highlight> among friends and on the net, I draw, write, design, and code. Lover of cats, astronomy, rock music and more. Currently studying my 2nd year of <i>English Language and Linguistics</i> at University of Kent.
+            <div class="code">To create art is to <blue>feel</blue>, and I exist within the art that I breathe.</div><!--code-->
+            </div>
+        </div><!--abt-right-->
+    </div><!--abt-flex-->
+    </div><!--abt-mid-->
+    </div><!--about-->
+    
+    
+    <!----------SKILLS SECTION---------->
+    <div id="skills-sect">
+    <div id="skills-mid">
+        <div class="skill-row">
+            <div class="skill-item">
+            <div class="skill-title">languages</div>
+            <div class="skill-line"></div>
+            
+            <div class="stat-row">
+                <div class="stat-name">Cantonese</div>
+                <div class="stat-deet">Native</div><!--stat-bar-->
+            </div><!--stat-row-->
+            
+            <div class="stat-row">
+                <div class="stat-name">Mandarin</div>
+                <div class="stat-deet">Fluent</div><!--stat-bar-->
+            </div><!--stat-row-->
+            
+            <div class="stat-row">
+                <div class="stat-name">English</div>
+                <div class="stat-deet">Fluent</div><!--stat-bar-->
+            </div><!--stat-row-->
+            
+            <div class="stat-row">
+                <div class="stat-name">Japanese</div>
+                <div class="stat-deet">Post-Beginner</div><!--stat-bar-->
+            </div><!--stat-row-->
+            </div><!--skill-item-->
+            
+            
+            
+            <div class="skill-item">
+            <div class="skill-title">artwork</div>
+            <div class="skill-line"></div>
+            
+            <div class="stat-row">
+                <div class="stat-name">Pen Drawings</div>
+                <div class="stat-bar">
+                    <div class="stat-fill" style="width:100%"></div>
+                </div><!--stat-bar-->
+            </div><!--stat-row-->
+            
+            <div class="stat-row">
+                <div class="stat-name">Mixed Media</div>
+                <div class="stat-bar">
+                    <div class="stat-fill" style="width:60%"></div>
+                </div><!--stat-bar-->
+            </div><!--stat-row-->
+            </div><!--skill-item-->
+            
+            
+            
+            <div class="skill-item">
+            <div class="skill-title">digital design</div>
+            <div class="skill-line"></div>
+            
+            <div class="stat-row">
+                <div class="stat-name">Photoshop</div>
+                <div class="stat-bar">
+                    <div class="stat-fill" style="width:80%"></div>
+                </div><!--stat-bar-->
+            </div><!--stat-row-->
+            
+            <div class="stat-row">
+                <div class="stat-name">FireAlpaca</div>
+                <div class="stat-bar">
+                    <div class="stat-fill" style="width:60%"></div>
+                </div><!--stat-bar-->
+            </div><!--stat-row-->
+            
+            <div class="stat-row">
+                <div class="stat-name">AutoCAD</div>
+                <div class="stat-bar">
+                    <div class="stat-fill" style="width:20%"></div>
+                </div><!--stat-bar-->
+            </div><!--stat-row-->
+            </div><!--skill-item-->
+            
+        </div><!--skill-row-->
+            
+            
+            
+        <div class="skill-row">
+            <div class="skill-item">
+            <div class="skill-title">web development</div>
+            <div class="skill-line"></div>
+            
+            <div class="stat-row">
+                <div class="stat-name">HTML</div>
+                <div class="stat-bar">
+                    <div class="stat-fill" style="width:100%"></div>
+                </div><!--stat-bar-->
+            </div><!--stat-row-->
+            
+            <div class="stat-row">
+                <div class="stat-name">CSS</div>
+                <div class="stat-bar">
+                    <div class="stat-fill" style="width:100%"></div>
+                </div><!--stat-bar-->
+            </div><!--stat-row-->
+            
+            <div class="stat-row">
+                <div class="stat-name">jQuery & JS</div>
+                <div class="stat-bar">
+                    <div class="stat-fill" style="width:30%"></div>
+                </div><!--stat-bar-->
+            </div><!--stat-row-->
+            </div><!--skill-item-->
+            
+            
+            
+            <div class="skill-item">
+            <div class="skill-title">IB achievements</div>
+            <div class="skill-line"></div>
+            
+            <div class="stat-row">
+                <div class="stat-name">Art & Design [HL]</div>
+                <div class="stat-deet">6</div><!--stat-bar-->
+            </div><!--stat-row-->
+            
+            <div class="stat-row">
+                <div class="stat-name">Chinese B [HL]</div>
+                <div class="stat-deet">6</div><!--stat-bar-->
+            </div><!--stat-row-->
+            
+            <div class="stat-row">
+                <div class="stat-name">English Language & Literature [SL]</div>
+                <div class="stat-deet">6</div><!--stat-bar-->
+            </div><!--stat-row-->
+            </div><!--skill-item-->
+            
+        </div><!--skill-row-->
+    </div><!--skills-mid-->
+    </div><!--skills-sect-->
+    
+    
+    <!----------ART SECTION---------->
+    <div id="art-sect">
+    <div id="art-mid">
+        <div class="artbigflex">
+        <div class="art-left">
+        <div class="art-row">
+            <img class="art-item" src="https://78.media.tumblr.com/4965bc7dbb500dcbfb222ffd6e17e5eb/tumblr_pbyh03aI1v1qg2f5co1_1280.png">
+            
+            <img class="art-item" src="https://78.media.tumblr.com/b62779a569ffbef3e2b1b62ce6fe19b4/tumblr_pbyh03aI1v1qg2f5co2_1280.png">
+            
+            <img class="art-item" src="https://static.tumblr.com/2pnwama/ldTpl07q2/dodc.png">
+        </div><!--art-row-->
+        
+        <div class="art-row">
+            <img class="art-item" src="https://78.media.tumblr.com/6bab1a93cb772b48b2aebec1188d8176/tumblr_pbyi9iIChY1qg2f5co1_1280.png">
+            
+            <img class="art-item" src="https://static.tumblr.com/2pnwama/eynpl085i/oxqb4lupei1v6jxx9o2wccc.png">
+            
+            <img class="art-item" src="https://78.media.tumblr.com/3bfa42f7f4c593b12ecdad9b324a64c0/tumblr_pbyh973Yrx1qg2f5co1_1280.png">
+        </div><!--art-row-->
+        </div><!--art-left-->
+        
+        
+        <div class="art-right">
+            <div class="arttiddy">artwork</div>
+            <div class="artdesc">
+            Having taken art classes as early as first grade, I have always believed that art is about expression and emotion. I came to love illustrating details via pen in particular, and it quickly became my speciality. I am proud to have established a signature art style that I am pleased with. I use a Uni pin fine line pigment ink pen and Pentel Stylo sketch pen on 120GSM paper.
+            <div class="glenmore"><a href="https://instagram.com/anyilia_">art gallery •➙</a></div>
+            </div><!--art-desc-->
+        </div><!--art-right-->
+        </div><!--artbigflex-->
+    </div><!--art-mid-->
+    </div><!--art-sect-->
+    
+    
+    
+    <!----------PHOTOGRAPHY SECTION---------->
+    <div id="photo-sect">
+    <div id="photo-mid">
+        <div class="bigtiddy">photography</div>
+        <div class="photo-row">
+            <img class="photo-item" src="https://78.media.tumblr.com/6638064b68de36f255515bc4515c6b32/tumblr_pb3g5mRVaL1qg2f5co1_1280.jpg">
+            
+            <img class="photo-item" src="https://78.media.tumblr.com/c7cf8e34e2403307c00746f9c63d72a1/tumblr_pb3g5mRVaL1qg2f5co2_1280.jpg">
+            
+            <img class="photo-item" src="https://78.media.tumblr.com/915a852a017a5074210ff356064d7909/tumblr_pb3g5mRVaL1qg2f5co3_1280.jpg">
+            
+            <img class="photo-item" src="https://78.media.tumblr.com/415568f012f5f2c62662edd7df247c7e/tumblr_nt0iudzvSO1qg2f5co4_r1_1280.png">
+        </div><!--photo-row-->
+        
+        <div class="photo-row">
+            <img class="photo-item" src="https://78.media.tumblr.com/af10759befccba4ddff5abe63a0cff67/tumblr_p0nd74Cvkx1qg2f5co1_1280.png">
+            
+            <img class="photo-item" src="https://78.media.tumblr.com/68a4095df31e00be0f418f8a152f52b1/tumblr_ox8pvweuua1qg2f5co2_1280.png">
+            
+            <img class="photo-item" src="https://78.media.tumblr.com/ad902559c6374fe89863805e4ac392e7/tumblr_ox8pvweuua1qg2f5co1_r1_1280.png">
+        </div><!--photo-row-->
+    </div><!--photo-mid-->
+    </div><!--photo-sect-->
+    
+    
+    
+    <!----------GFX SECTION---------->
+    <div id="gfx-sect">
+    <div id="gfx-mid">
+        <div class="bigtiddy">graphic design</div>
+        <div class="g-cont">
+            <div class="g-main">
+                <img class="g-img" src="https://66.media.tumblr.com/345d2a41d57ed0a2a69a27bf99634016/tumblr_pknvu8sF9s1qg2f5co4_r2_1280.png">
+                <div class="gfx-flex">
+                <div class="gfx-tit">chair catalogue</div>
+                <div class="llline"></div>
+                </div><!--gfx-flex-->
+                
+                <div class="g-desc">Having been steadily inspired by and collecting <a class="blue" href="//www.ikea.com/hk/en/">IKEA</a>'s sleek catalogues for many years, I decided to make a chair catalogue magazine section myself by compiling photos that I’d taken professionally during my work experience in the furniture company <a class="blue" href="//www.decca.com.hk/">DECCA</a>, and pieced them together for a double magazine spread.</div>
+            </div><!--g-main-->
+            
+            <div class="g-main">
+                <div class="g-picflex">
+                <img class="g-flimg" src="https://78.media.tumblr.com/2327481e1a712dab17b1b7cb542b56d4/tumblr_pbyi9iIChY1qg2f5co3_1280.png">
+                <img class="g-flimg" src="https://78.media.tumblr.com/0aaf2cc83758e85e650e161084379b0b/tumblr_pbyi9iIChY1qg2f5co2_1280.png">
+                </div><!--g-picflex-->
+                
+                <div class="gfx-flex">
+                <div class="gfx-tit">snack box product design</div>
+                <div class="llline"></div>
+                </div><!--gfx-flex-->
+                
+                <div class="g-desc">These two works are sample products for two different types of snacks under my custom brand name <highlight>zestival!</highlight>, inspired by the packaging layout styles of the Japanese confectionery brand <a class="blue" href="https://www.meiji.com/">Meiji</a>.</div>
+            </div><!--g-main-->
+        </div><!--g-cont-->
+    </div><!--gfx-mid-->
+    </div><!--gfx-sect-->
+    
+    
+    <!----------WEB SECTION---------->
+    <div id="web-sect">
+    <div id="web-mid">
+        <div class="glenflex">
+    
+        <div class="glenleft">
+        <div class="webtiddy">web development</div>
+        <div class="webdesc">
+            <img class="glenjamin" src="https://dl.dropboxusercontent.com/s/e4n393jw28moca9/f1_black%20svg.svg">
+            My first experience with web development began on the blogging site <highlight>Tumblr</highlight>, a platform in which users can choose a blog theme, or create and upload their own. I couldn't find a theme with features that catered directly to my preferences, and so I decided to make my own by learning how to code together with Tumblr's API. In summer 2015, I established <highlight>glenthemes</highlight>, a blog to share my themes for public use. As of January 2019, my free themes have 270k+ hits on <a class="blue" href="https://pastebin.com/u/glenthemes">Pastebin</a>, and my <a class="blue" href="https://gumroad.com/glenthemes">premium themes</a> have served over 60 customers in the past year.
+            <div class="glenmore"><a href="//glenthemes.tumblr.com/設計">40+ themes •➙</a></div>
+        </div><!--web-desc-->
+        </div><!--glenleft-->
+        
+        <div class="glenright">
+        <div class="glen-row">
+            <div class="glen-big">
+                <img class="glen-pc" src="https://66.media.tumblr.com/27112be000da25e3a550752c8b03ff1b/tumblr_pkyjjduUK91qg2f5co1_1280.png">
+                <div class="glen-holder">
+                <img class="glen-pv" src="https://68.media.tumblr.com/714862a519985aea75a7581dbbf94f2d/tumblr_ok5ew0Pzmm1ubolzro1_540.gif">
+                <a class="glen-bar" target="_blank" title="theme preview" href="//glenthpvs.tumblr.com/wonderduo">wonder duo</a>
+                </div><!--glen-holder-->
+            </div><!--glen-big-->
+            
+            <div class="glen-big">
+                <img class="glen-pc" src="https://66.media.tumblr.com/27112be000da25e3a550752c8b03ff1b/tumblr_pkyjjduUK91qg2f5co1_1280.png">
+                <div class="glen-holder">
+                <img class="glen-pv" src="https://78.media.tumblr.com/32707cd818ae6639471e5fb22f08485c/tumblr_oopz5koqgz1ubolzro4_r1_540.gif">
+                <a class="glen-bar" target="_blank" title="theme preview" href="//glenthpvs.tumblr.com/420">incandescence</a>
+                </div><!--glen-holder-->
+            </div><!--glen-big-->
+        </div><!--glen-row-->
+        
+        <div class="glen-row">
+            <div class="glen-big">
+                <img class="glen-pc" src="https://66.media.tumblr.com/27112be000da25e3a550752c8b03ff1b/tumblr_pkyjjduUK91qg2f5co1_1280.png">
+                <div class="glen-holder">
+                <img class="glen-pv" src="https://78.media.tumblr.com/e30e0acf791bd83142ef93861b9168f2/tumblr_padc3mkzFh1ubolzro1_1280.png">
+                <a class="glen-bar" target="_blank" title="theme preview" href="//glenthpvs.tumblr.com/bios">BIOS</a>
+                </div><!--glen-holder-->
+            </div><!--glen-big-->
+            
+            <div class="glen-big">
+                <img class="glen-pc" src="https://66.media.tumblr.com/27112be000da25e3a550752c8b03ff1b/tumblr_pkyjjduUK91qg2f5co1_1280.png">
+                <div class="glen-holder">
+                <img class="glen-pv" src="https://78.media.tumblr.com/2917af09859b11f31b99005a620fcdc6/tumblr_p3tpxoLAKC1ubolzro3_540.gif">
+                <a class="glen-bar" target="_blank" title="theme preview" href="//glenthpvs.tumblr.com/lionheart">Lionheart</a>
+                </div><!--glen-holder-->
+            </div><!--glen-big-->
+        </div><!--glen-row-->
+        
+        </div><!--glen-flex-->
+        </div><!--glenright-->
+    </div><!--web-mid-->
+    </div><!--web-sect-->
+    
+    
+    
+    <!----------GFX SECTION---------->
+    <div id="collab-sect">
+    <div id="collab-mid">
+        <div class="bigtiddy" style="padding-right:28px">collaborations &mdash; project ⋮ <i>fabricated</i></div>
+        <div class="coral-flex">
+        <img class="big-coral" src="https://66.media.tumblr.com/d680eaac1638b577190d465c65a8be56/tumblr_pablcy1UvS1ubolzro2_r1_1280.png">
+        <div class="coral-right">
+            <!--<div class="collab-tit mega">project ⋮ fabricated</div>-->
+            <div class="collab-tit">authors</div>
+            <div class="author-flex">
+                <img class="gleuressence" src="https://66.media.tumblr.com/avatar_5c30b692a6bb_128.pnj">
+                <div class="fleur">
+                <div class="fleur-top">Hiu Tung T.</div>
+                <div class="fleur-bot">Theme designer & coder</div>
+                </div><!--fleur-->
+            </div><!--author-flex-->
+            
+            <div class="author-flex">
+                <img class="gleuressence" src="https://66.media.tumblr.com/avatar_a8ff288ebd02_128.pnj">
+                <div class="fleur">
+                <div class="fleur-top">Christy T.</div>
+                <div class="fleur-bot">Featured artist</div>
+                </div><!--fleur-->
+            </div><!--author-flex-->
+            
+            <div class="collab-tit">details</div>
+            <div class="yorha">
+                <highlight>Fabricated</highlight> is a theme designed and coded by me at <highlight>glenthemes</highlight>. It features <b>2B</b> from <highlight>NieR: Automata</highlight>, an action RPG developed by <highlight>PlatinumGames</highlight>. The <a class="blue" href="//superfleuressence.tumblr.com/post/175077491149/2b-commission-for-the-dearest-glenthemes" target="_blank">artwork</a> in the left sidebar is commissioned, drawn by Christy T.
+            </div><!--yorha-->
+            <div class="glenmore"><a href="//glenthpvs.tumblr.com/fabricated">visit preview •➙</a></div>
+        </div><!--coral-right-->
+        </div><!--coral-flex-->
+    </div><!--collab-mid-->
+    </div><!--collab-sect-->
+    
+    
+    
+    <!----------CONTACT SECTION---------->
+    <div id="contact-sect">
+    <div id="contact-mid">
+        <div class="bigtiddy" style="word-spacing:10px">contact ⋮ connect ⋮ links</div>
+        <div class="soche">
+            <div class="soctiddy indent">keep in touch</div>
+            
+            <div class="honeyflex">
+            <span class="th th-envelope-o"></span>
+            <div class="honeytext"><b>Email:</b> <a href="mailto:glenthemes.exe@gmail.com">glenthemes.exe<et>@</et>gmail.com</a></div>
+            </div><!--honeyflex-->
+            
+            <div class="honeyflex">
+            <span class="th th-tumblr-2"></span>
+            <div class="honeytext"><b>Theme blog:</b> <a href="//glenthemes.tumblr.com">glenthemes</a></div>
+            </div><!--honeyflex-->
+            
+            <div class="honeyflex">
+            <span class="th th-twitter-o"></span>
+            <div class="honeytext"><b>Twitter:</b> <a href="//twitter.com/ukiibox">ukiibox</a></div>
+            </div><!--honeyflex-->
+            
+            <div class="honeyflex">
+            <span class="th th-instagram-o"></span>
+            <div class="honeytext"><b>Instagram:</b> <a href="//instagram.com/fenneltail/">Fenneltail</a></div>
+            </div><!--honeyflex-->
+        </div><!--soche-->
+        
+        <div class="soche">
+            <div class="soctiddy indent">other links</div>
+            
+            <div class="honeyflex">
+            <span class="th th-edit-o"></span>
+            <div class="honeytext"><b>Pastebin:</b> <a href="https://pastebin.com/u/glenthemes">glenthemes</a></div>
+            </div><!--honeyflex-->
+            
+            <div class="honeyflex">
+            <span class="th th-github"></span>
+            <div class="honeytext"><b>GitHub:</b> <a href="https://github.com/glenthemes">glenthemes</a></div>
+            </div><!--honeyflex-->
+            
+            <div class="honeyflex">
+            <span class="th th-shopping-bag-o"></span>
+            <div class="honeytext"><b>Gumroad:</b> <a href="//twitter.com/ukiibox">glenthemes</a></div>
+            </div><!--honeyflex-->
+            
+            <div class="honeyflex">
+            <span class="th th-instagram-o"></span>
+            <div class="honeytext"><b>art gallery:</b> <a href="//instagram.com/anyilia_">anyilia_</a></div>
+            </div><!--honeyflex-->
+        </div><!--soche-->
+        
+        
+        <div class="soche" style="margin-right:0px">
+            <div class="soctiddy">support me</div>
+            
+            <div class="context">
+                As an entirely self-taught hobbyist front-end developer, I design and code every theme whilst also in university, and provide user customization support to the best of my ability for free. The tiniest amount of financial support is highly treasured.
+            </div>
+        
+            <div class="honeyflex">
+            <span class="th th-latte-o"></span>
+            <div class="honeytext"><b>donate:</b> <a href="//ko-fi.com/glenthemes">ko-fi</a>&nbsp; ⋮ &nbsp;<a href="https://www.paypal.me/ukiinas">paypal</a></div>
+            </div><!--honeyflex-->
+        </div><!--soche-->
+        
+        <div class="cr">designed & coded by HT @ glenthemes ⋮ 2019 ⋮ [<a class="poptart">credits</a>]</div>
+    </div><!--contact-mid-->
+    </div><!--contact-sect-->
+</div><!--megacont-->
  
  
 </body>
-</div><!--nudge-->
-</div><!--cont-->
 
 </html>
