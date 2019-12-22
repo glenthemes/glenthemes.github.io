@@ -1525,14 +1525,14 @@ p:last-child {margin-bottom:auto!important;}
 <div id="jump-b">
  
     <!-----PAGE JUMP BUTTONS----->
-    <a class="sq" href="#screen1"></a>
-    <a class="sq" href="#screen2"></a>
-    <a class="sq" href="#screen3"></a>
-    <a class="sq" href="#screen4"></a>
-    <a class="sq" href="#screen5"></a>
-    <a class="sq" href="#screen6"></a>
-    <a class="sq" href="#screen7"></a>
-    <a class="sq" href="#screen8"></a>
+    <a class="sq" href="#screen1" title="back to top"></a>
+    <a class="sq" href="#screen2" title="about"></a>
+    <a class="sq" href="#screen3" title="artwork"></a>
+    <a class="sq" href="#screen4" title="graphic design"></a>
+    <a class="sq" href="#screen5" title="web development"></a>
+    <a class="sq" href="#screen6" title="style"></a>
+    <a class="sq" href="#screen7" title="photography"></a>
+    <a class="sq" href="#screen8" title="contact></a>
    
 </div><!--jump-b--><!--do not delete this line-->
 </div><!--jump-a--><!--do not delete this line-->
@@ -1579,7 +1579,7 @@ p:last-child {margin-bottom:auto!important;}
                     </li>
                     
                     <li class="one-link">
-                        <a href="#screen8">contact</a> <!--popup window-->
+                        <a href="#screen8">contact</a>
                         <div class="link-hov"></div>
                     </li>
                 </ul>
