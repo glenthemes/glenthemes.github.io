@@ -1,11 +1,11 @@
 <!-----------------------------------------------------------------------
 
-PORTFOLIO ⋮ Dec. 2019 [updated jan 2022]
+PORTFOLIO ⋮ Dec. 2019 [updated Jun 20232]
 
 ------------------------------------------------------------------------>
  
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
  
@@ -35,8 +35,6 @@ attribute:"title"
 
 <script src="//static.tumblr.com/whx9ghv/lSGm6k18m/jquery.scrollto-1.4.2-min.js"></script>
 <script src="//static.tumblr.com/gtjt4bo/rE7puvcl5/jump-scroll.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/TweenMax.min.js"></script>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -194,42 +192,6 @@ $(document).ready(function(){
         "opacity":1
     });
 }); // end ready
-
-
-
-// ****** HEADER MUSIC ****** //
-/*
-$(document).ready(function(){
-    var headerMusic = document.getElementById("header-music");
-    
-    $(".screen1").one("mouseover",function(){
-        $(".music-indicator").delay(500).fadeIn(500);
-        headerMusic.play();
-    });
-    
-    $(".music-indicator").click(function(){
-        if (headerMusic.paused) {
-            headerMusic.play();
-            TweenMax.to(headerMusic,0.7, {volume:1});
-            $(".stop-dancing").stop(true,false).fadeOut(300);
-            $(".music-line").delay(300).fadeIn(300);
-        } else {
-            TweenMax.to(headerMusic,0.7, {volume:0});
-            setTimeout(function(){
-                headerMusic.pause();
-            }, 700);
-            $(".music-line").stop(true,false).fadeOut(300);
-            $(".stop-dancing").delay(300).fadeIn(300);
-        }
-    });// end music click
-    
-    headerMusic.onended = function(){
-        $(".music-line").stop(true,false).fadeOut(300);
-        $(".stop-dancing").delay(300).fadeIn(300);
-    };
-    
-});// end ready
-*/
 
 
 
@@ -1593,7 +1555,7 @@ p:last-child {margin-bottom:auto!important;}
             <div class="poster-image image-4"></div>
             <div class="poster-image image-5"></div>
             
-            <div class="header-corner-credit">&copy; HT 2019-2022</div>
+            <div class="header-corner-credit">&copy; HT 2019-2023</div>
             
             <div class="scroll-indicator">
             <a href="#screen2" style="display:inline-block">
@@ -1601,21 +1563,6 @@ p:last-child {margin-bottom:auto!important;}
                 <!--<div class="mouse-icon"><div class="wheel"></div></div>-->
                 <div class="scroll-line"></div>
             </a></div><!--scroll-indicator-->
-            
-            
-            <div class="music-indicator">
-            <div class="m-padding">
-                <li class="music-line ml-1">
-                <li class="music-line ml-2">
-                <li class="music-line ml-3"></li>
-                <div class="stop-dancing">
-                    <i data-feather="volume-x"></i>
-                </div>
-            </div>
-            </div>
-            
-            
-            <audio id="header-music" src="https://vignette.wikia.nocookie.net/bandori/images/5/59/Ringing_Bloom_%28Game_Version%29.ogg/revision/latest?cb=20190219064300" type="audio"></audio>
             
 
         </div><!--poster-container-->
@@ -1632,7 +1579,7 @@ p:last-child {margin-bottom:auto!important;}
         <div class="about-cont">
         <div class="about-vh abt">
             <div class="about-title">about.<ht>ht</ht>ml</div>
-            <div class="about-text">Hello, I'm <b>HT</b>, a freelance <b>web designer & developer</b> from Hong Kong. My interests revolve around clean and bold aesthetics,  game-inspired UX, and writing code in a way that's easy to understand and alter for various users. I'm completely self-taught and spent the last 6 years building and improving my skillset. I'm fundamentally a visual arts enthusiast who loves to draw and write. Having graduated with an English degree from the UK in 2020, I'm look forward to advancing my interest in development into a fulfilling career.</div><!--about-text-->
+            <div class="about-text">Hello, I'm <b>HT</b>, a freelance <b>web designer & developer</b> from Hong Kong. My interests revolve around clean and bold aesthetics,  game-inspired UX, and writing code in a way that's easy to understand and alter for various users. I'm primarily self-taught and have spent the last 7 years building and improving my skillset. At heart, I'm a visual arts enthusiast who loves to draw and write. Having graduated with an English degree from the UK in 2020, I transformed my aptitude in the arts into a programming career by enrolling in a web development course at Langara College, and I'm due to graduate by the end of 2023.</div><!--about-text-->
             
             <div class="hr"></div>
             
@@ -1655,11 +1602,29 @@ p:last-child {margin-bottom:auto!important;}
         
         <div class="social-media-col">
             <div class="social-media">
-                <a href="https://glenthemes.tumblr.com"><i class="fab fa-tumblr"></i></a>
-                <a href="https://instagram.com/ht.psd"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/glenjaminx"><i class="fab fa-twitter"></i></a>
-                <a href="https://gumroad.com/glenthemes"><i class="fas fa-shopping-cart"></i></a>
-                <a href="https://ko-fi.com/glenthemes"><i class="fas fa-donate"></i></a>
+                <a href="//github.com/glenthemes" title="Github">
+                    <i class="fab fa-github"></i>
+                </a>
+                
+                <a href="//linkedin.com/in/ht-dev" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                
+                <a href="//glenthemes.tumblr.com/portfolio" title="tumblr portfolio">
+                    <i class="fab fa-tumblr"></i>
+                </a>
+                
+                <a href="//instagram.com/ht.psd" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                
+                <a href="//twitter.com/glen_px" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                
+                <a href="//ko-fi.com/glenthemes/shop" title="My Store">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
             </div><!--social-media-->
         </div><!--social-media-col-->
     
@@ -1703,9 +1668,9 @@ p:last-child {margin-bottom:auto!important;}
                 <div class="about-vh art">
                 <div class="about-title">artwork <span>&mdash;</span> info etc.</div>
                 <div class="about-text">
-                Having drawn all my life, it wasn't until my <b>pen</b>ultimate year of high school that I fell in love with ink pen drawings. When asked "what happens if you make a mistake?", my answer is simple: <b>there are no mistakes when it comes to art; they are all part of the piece.</b> Developing such an art style as my speciality has molded me into a meticulous perfectionist, and I take pride with every stroke that I cast on paper.
+                Having drawn all my life, it wasn't until my <b>pen</b>ultimate year of high school that I fell in love with ink pen drawings. When asked "what happens if you make a mistake?", my answer is simple: <b>mistakes are all part of the creation process; you have the power to ignore them, or you can transform them into a part of your story.</b> Developing such an art style as my speciality has molded me into a meticulous perfectionist, and I take pride with every stroke that I cast on paper.
                 <p>
-                Aside from traditional art, I also produce <a href="https://anyilia.tumblr.com/tagged/digital" target="_blank">digital colourings</a> of my art. I have been acquainted with Photoshop for 5 years.
+                Aside from traditional art, I also produce <a href="https://anyilia.tumblr.com/tagged/digital" target="_blank">digital colourings</a> of my art. I have been acquainted with Photoshop for 7 years.
                 </div><!--about-text-->
                 
                 <div class="hobbies">
@@ -1868,11 +1833,11 @@ p:last-child {margin-bottom:auto!important;}
             
             
             <div class="web-item">
-            <a href="//glenthpvs.tumblr.com/420">
-                <img class="web-img" src="https://78.media.tumblr.com/32707cd818ae6639471e5fb22f08485c/tumblr_oopz5koqgz1ubolzro4_r1_540.gif">
+            <a href="//glenthpvs.tumblr.com/ignorance">
+                <img class="web-img" src="https://64.media.tumblr.com/baa3313e2ed34c085e7eaf1ca5e44c32/8993dcdd604939fe-5c/s2048x3072/130363d495e4b64061a510cfb55cf2f1cbc0cf20.png">
                 <div class="web-cover">
                     <div class="wc">
-                        <div class="thing-title">Incandescence</div>
+                        <div class="thing-title">Ignorance</div>
                         <div class="thing-sub">Tumblr theme</div>
                     </div><!--wc-->
                 </div><!--web-cover-->
@@ -2020,7 +1985,7 @@ p:last-child {margin-bottom:auto!important;}
             <div class="cta-email">glenthemes.exe@gmail.com</div>
         </div>
         
-        <div class="credits">Made with ❤️ by <a href="#screen2">HT</a> &emsp;⋮&emsp; Powered by <a href="https://github.com">GitHub</a> &emsp;⋮&emsp; <a title="“Canela Web” font by Miguel Reyes">Credits</a></div>
+        <div class="credits">Made with ❤️ by <a href="#screen2">HT</a> &emsp;⋮&emsp; Powered by <a href="https://github.com">GitHub</a> &emsp;⋮&emsp; <a title="“Canela Web” font by Miguel Reyes | Feather Icons | Fontawesome">Credits</a></div>
     </div><!--screen-padding-->
 </div><!-- // -->
 </div><!--#screen8-->
