@@ -19,7 +19,7 @@ a {
     }
 
     #cursor {
-        z-index: 10000;
+        z-index: 99;
         position: fixed;
         left: 0;
         top: 0;
@@ -1017,7 +1017,7 @@ footer .crds {
     border-radius:var(--Popup-Corner-Rounding);
     border:1px solid var(--Popup-Border);
     box-shadow:10px 10px 35px 0 rgba(122, 112, 112, 0.04);
-    font-size:var(--Popup-Font-Size)
+    font-size:var(--Popup-Font-Size);
 }
 
 .popup-box, .popup-box * {
@@ -1039,6 +1039,13 @@ footer .crds {
 
 .popup-box a:hover {
     color:var(--Popup-Links-Hover)
+}
+
+.popup-box ul {
+    width:calc(100% + 0.69rem);
+    padding-right:0.69rem;
+    max-height:69vh;
+    overflow-y:auto;
 }
 
 .popup-box li {
