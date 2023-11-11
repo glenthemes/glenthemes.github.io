@@ -99,10 +99,10 @@
     :root {
         --Nav-Font-Size:0.85rem;
         --Skills-Column-Count:1;
-        --Screen-Frame-Size:13vw;
+        --Screen-Frame-Size:14vw;
     }
 
-    .header-scroll { display:none }
+    .header-right h2 .dash, .header-scroll { display:none }
 
     /* .headwrap {
         position:fixed;
