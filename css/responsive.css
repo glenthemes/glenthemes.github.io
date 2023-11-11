@@ -186,4 +186,6 @@
     main {
         margin:0 var(--Screen-Frame-Size-Secondary)
     }
+
+    .header-right h2 .dash { display:none }
 }
