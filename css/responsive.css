@@ -158,7 +158,7 @@
 @media(max-width: 580px){
     :root {
         --Header-PFP-Size:35%;
-        --Screen-Frame-Size-Secondary:calc(var(--Screen-Frame-Size) * 0.69);
+        --Screen-Frame-Size-Secondary:10vw;
         --Header-Gutter-Size:2.5rem;
         --Project-Width:calc(100vw - (var(--Screen-Frame-Size-Secondary) * 2) - 2.5vw);
         --Project-Corner-Rounding:1rem;
